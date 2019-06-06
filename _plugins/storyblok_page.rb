@@ -12,8 +12,7 @@ module Jekyll
       layout = story['content']['component']
 
       self.process(@name)
-      # Jekyll provides the processed layouts in the site.layouts hash, so we
-      # will use it here!
+      # Jekyll provides the processed layouts in the site.layouts hash, so we will use it here!
       # This makes it possible to use gem-based Jekyll themes.
       self.data    = site.layouts[layout].data.dup
       self.content = site.layouts[layout].content.dup

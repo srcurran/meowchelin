@@ -1,0 +1,68 @@
+body{font-family:'Montserrat', sans-serif;background-color: #FFF4D9;padding-top:60px}
+.row{margin:2vh 0;}
+h1{font-size:90px;font-weight:bold;}
+h2{font-size:64px;font-weight:bold;text-transform: uppercase;}
+h3{font-size:45px;font-weight:bold;text-transform: uppercase;}
+h4{font-size:32px;font-weight:bold;text-transform: uppercase;}
+h5{font-size:23px;font-weight:bold;text-transform: uppercase;}
+h6{font-size:16px;font-weight:bold;}
+p{font-size:16px;}
+p.para-xl{font-size:23px}
+p.para-small{font-size:13px;}
+a{color:#294566;font-weight:500}
+
+.img-margin{margin-bottom:2vh}
+.nobold{font-weight:normal}
+.clear{clear:both}
+
+input, select{display:block;margin-bottom:2vh}
+/* NAV */
+
+.navbar{background-color:#C790C5;box-shadow: 0px 2px 8px 0px rgba(0,0,0,.1);}
+.navbar .logo{text-transform: uppercase;font-weight:bold;}
+.navbar .nav-link.scroll a{color:#FFF4D9;}
+.navbar .nav-link.page a{color:#D4E283;}
+
+/* EVENTS */
+.events .event{margin-bottom:3vh;}
+.events .event .inner{padding:2vh;color:#333;}
+.bike_event .inner{background:#D4E283;}
+.plant_event .inner{background:#C790C5}
+
+/* INDEX */
+div.root section{padding:5rem 0;}
+/* INDEX_HERO */
+div.root section#hero-homepage{background: #FFF4D9 url('/static/images/cub-house-tandem.png') 110% 100% no-repeat;}
+div.root section#hero-homepage h1{color:#C790C5;padding:10vh 0}
+
+/* INDEX_OVERVIEW */
+div.root section#overview{background: #709067;color:#FFF4D9;}
+div.root section#overview table{margin-bottom:1rem;width:100%;}
+
+/* INDEX PHOTO OVERVIEW */
+div.root #photo-overview{background:#FFF4D9;}
+
+/* CAROUSEL */
+.carousel {overflow:scroll;width:100%;}
+.carousel .scroll-zone{width:8000px;}
+.carousel img{float:left;height:500px;margin:20px;}
+
+/* INDEX BIKESHOP */
+#bike-shop{background:#3CC2AB;color:#FFF4D9;}
+#bike-shop .bike_brands-we-carry ul{padding-left:0;margin-left:0;}
+#bike-shop .bike_brands-we-carry ul{column-count:3;column-gap:3vh;}
+#bike-shop .bike_brands-we-carry ul li{list-style: none;margin-right:0;padding-top:1vh;padding-left:0}
+
+#events{background: #709067}
+
+/* INDEX POPUPS */
+#popups{background:#3CC2AB}
+
+#cubhouseteam{background:#D4E283}
+
+/* SHOP */
+.products .product{margin-bottom:8vh}
+.product_images img{margin-bottom:4vh}
+footer{background:#3CC2AB;margin-bottom:0;padding:2vh}
+footer p, footer a{margin-bottom:0; color:#FFF4D9}
+
