@@ -20,6 +20,7 @@ input, select{display:block;margin-bottom:2vh}
 
 .navbar{background-color:#C790C5;box-shadow: 0px 2px 8px 0px rgba(0,0,0,.1);}
 .navbar .logo{text-transform: uppercase;font-weight:bold;}
+.navbar .nav-link{font-weight:500;text-decoration: none;}
 .navbar .nav-link.scroll a{color:#FFF4D9;}
 .navbar .nav-link.page a{color:#D4E283;}
 
