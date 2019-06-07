@@ -9,7 +9,7 @@ h6{font-size:16px;font-weight:bold;}
 p{font-size:16px;}
 .para-xl{font-size:23px}
 .para-small{font-size:13px;}
-a{color:#294566;}
+a{color:#294566;text-decoration: underline;}
 
 .img-margin{margin-bottom:2vh}
 .nobold{font-weight:normal}
@@ -56,14 +56,18 @@ div.root #photo-overview{background:#FFF4D9;}
 #bike-shop  ul{column-count:4;column-gap:3vh;}
 #bike-shop  ul li{list-style: none;margin-right:0;padding-top:1vh;padding-left:0}
 
-#events{background: #709067}
+#eventgrid{background: #709067}
+.events .inner-date{}
 #plants-coffee .image-container{overflow:hidden;height:50vh;}
 #plants-coffee .image-container img{}
 
 /* INDEX POPUPS */
 #popups{background:#3CC2AB}
 
-#cubhouseteam{background:#D4E283}
+.sixcol{background:#D4E283}
+.sixcol .col-md-2 img{max-width:100%;height:auto;}
+.sixcol .col-md-2 p{font-size:13px;}
+
 
 /* PRODUCTS */
 #products #hero{padding:0;}

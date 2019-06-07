@@ -1,0 +1,19 @@
+<section id="teamdream-ringtail">
+	<div class="container">
+		{% if blok.title != "" %}
+		<div class="row">
+			<div class="col-md-12">
+				{{ blok.title }}
+			</div>
+		</div>	
+		{% endif %}
+		<div class="row">
+			<div id="teamdream" class="col-md-5">
+				{{ blok.lefttext | markdownify }}
+			</div>
+			<div id="ringtail" class="col-md-5 offset-md-2">
+				{{ blok.righttext | markdownify }}
+			</div>
+		</div>
+	</div>
+</section>
