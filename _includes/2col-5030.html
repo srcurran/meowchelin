@@ -1,12 +1,22 @@
-<section id="overview">
+{{blok._editable}}
+
+<section id="{{ blok.sectionID }}">
     <div class="container">
+        {% if blok.Title != null %}
         <div class="row">
-            <div id="overview-intro" class="col-md-6">
-                {{ blok.LeftText }}
+            <div id="intro-text" class="col-md-12">
+                <h4>{{ blok.Title }}</h4>
+                {{ blok.IntroText | markdownify }}
+            </div>
+        </div>
+        {% endif %}
+        <div class="row">    
+            <div id="overview-intro" class="col-md-7">
+                {{ blok.LeftText | markdownify }}
             </div>
             
-            <div id="overview-deets" class="col-md-4 offset-md-2">
-                {{ blok.RightText}}
+            <div id="overview-deets" class="col-md-4 offset-md-1">
+                {{ blok.RightText | markdownify}}
             </div>
         </div>
     </div>

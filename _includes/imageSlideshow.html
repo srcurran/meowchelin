@@ -1,0 +1,15 @@
+{{blok._editable}}
+<section id="photo-overview">
+    <div class="container">
+        <div class="row">
+        	{% if blok.title != null %}<h4>{{ blok.title }}</h4>{% endif %}
+            <div class="carousel">
+                <div class="scroll-zone">
+                	{% for blok in blok.image_grid %}
+                		<img src="{{ blok.filename }}" />
+                	{% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

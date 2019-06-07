@@ -1,0 +1,27 @@
+<section id="popups">
+	<div class="container">
+		<div class="row">
+			<div class="popup-details col-md-12">
+				<h4>{{ blok.Eyebrow }}</h4>
+				<h2>{{ blok.Title }}</h2>
+				<h5>{{ blok.Subhead }}</h5>
+				{{ blok.Description | markdownify }}
+			</div>
+			<div class="carousel">
+				<div class="scroll-zone">
+					{% for blok in blok.ImageGallery %}
+                		<img src="{{ blok.filename }}" />
+                	{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="details col-md-6">
+				{{ blok.LeftText | markdownify }}
+			</div>
+			<div class="details col-md-6 text-right">
+				{{ blok.RightText | markdownify }}
+			</div>
+		</div>
+	</div>
+</section>

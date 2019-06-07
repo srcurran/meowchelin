@@ -1,0 +1,22 @@
+{{blok._editable}}
+<section id="{{ blok.sectionID }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="image-container media">
+					<img src="{{ blok.leftImage }}" class="d-flex align-self-center mr-3 img-fluid" />
+				</div>
+				<h4>{{ blok.leftTitle }}</h4>
+				{{ blok.leftText | markdownify }}
+			</div>
+			<div class="col-md-3 offset-md-1">
+				<div class="image-container media">
+					<img src="{{ blok.rightImage }}" class="d-flex align-self-center mr-3 img-fluid" />
+				</div>
+				<h4 class="pump-coffee">{{ blok.rightTitle  }}</h4>
+				<p class="para-xl">{{ blok.rightTagline | markdownify }}</p>
+				{{ blok.rightText | markdownify }}
+			</div>
+		</div>
+	</div>
+</section>

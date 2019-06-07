@@ -7,8 +7,8 @@ h4{font-size:32px;font-weight:bold;text-transform: uppercase;}
 h5{font-size:23px;font-weight:bold;text-transform: uppercase;}
 h6{font-size:16px;font-weight:bold;}
 p{font-size:16px;}
-p.para-xl{font-size:23px}
-p.para-small{font-size:13px;}
+.para-xl{font-size:23px}
+.para-small{font-size:13px;}
 a{color:#294566;font-weight:500}
 
 .img-margin{margin-bottom:2vh}
@@ -45,15 +45,18 @@ div.root #photo-overview{background:#FFF4D9;}
 /* CAROUSEL */
 .carousel {overflow:scroll;width:100%;}
 .carousel .scroll-zone{width:8000px;}
+.carousel .scroll-zone img:first-of-type{margin-left:0;}
 .carousel img{float:left;height:500px;margin:20px;}
 
 /* INDEX BIKESHOP */
 #bike-shop{background:#3CC2AB;color:#FFF4D9;}
-#bike-shop .bike_brands-we-carry ul{padding-left:0;margin-left:0;}
-#bike-shop .bike_brands-we-carry ul{column-count:3;column-gap:3vh;}
-#bike-shop .bike_brands-we-carry ul li{list-style: none;margin-right:0;padding-top:1vh;padding-left:0}
+#bike-shop  ul{padding-left:0;margin-left:0;margin-bottom:1vh;}
+#bike-shop  ul{column-count:4;column-gap:3vh;}
+#bike-shop  ul li{list-style: none;margin-right:0;padding-top:1vh;padding-left:0}
 
 #events{background: #709067}
+#plants-coffee .image-container{overflow:hidden;height:50vh;}
+#plants-coffee .image-container img{}
 
 /* INDEX POPUPS */
 #popups{background:#3CC2AB}
