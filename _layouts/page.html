@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ page.story.name }}</title>
-    <link rel="stylesheet" href="/static/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="/static/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/cubhouse.css">
-    <script type="text/javascript" src="/static/js/jquery.js"></script>
-    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/static/js/cubhouse.js"></script>
-  </head>
-  <body>
-    <!-- nav -->
-    <nav class="navbar fixed-top">
-      <div class="logo"><a href="/">The Cub House</a></div>
-      <div class="navigation-list">
-        <ul class="nav">
-          <li class="nav-link scroll"><a href="/#bike-shop">Bikes</a></li>
-          <li class="nav-link scroll"><a href="/#plants-coffee">Plants</a></li>
-          <li class="nav-link scroll"><a href="/#plants-coffee">Coffee</a></li>
-          <li class="nav-link scroll"><a href="/#popups">Popups</a></li>
-          <li class="nav-link page"><a class="page" href="/events">Events</a></li>
-          <li class="nav-link page"><a class="page" href="/shop">Shop</a></li>
-        </ul>
-      </div>
-    </nav>
+{% include header.html %}
     <!-- root -->
     {{page.story.content._editable}}
     <div class="root">
@@ -33,14 +6,24 @@
         {% include {{blok.component}}.html blok=blok %}
       {% endfor %}
     </div>
-
-    <!-- footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <p>2510 Mission Street, San Marion, CA • <a href="#>">626-755-3003</a> • <a href="#">info@cubhouse.cc</a> • <a href="#">@itsnotabikeshop</a></p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    
+<script>
+storyblok.init()
+storyblok.on('change', function() {
+  function getAjax(url, success) {
+      var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+      xhr.open('GET', url);
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState>3 && xhr.status==200) success(xhr.responseText);
+      };
+      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      xhr.send();
+      return xhr;
+  }
+  getAjax('/rebuild', function(data){
+    console.log(data)
+    window.location.reload()
+  })
+})
+</script>
+{% include footer.html %}

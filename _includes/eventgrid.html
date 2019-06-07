@@ -1,0 +1,22 @@
+<section class="eventgrid">
+	<div class="container">
+		<div class="row">
+			<div class="popup-details col-md-12">
+				{{page.story.content._editable}}
+				<h4>{{ blok.title }}</h4>
+				<pre>{{ blok.limit }}</pre>
+				{% assign i = 0 %}
+				{% for p in site.pages %}
+
+					{% if p.path contains "events" %}
+
+<a href="{{ p.story.full_slug }}"> <h4>{{p.story.name}}</h4></a>
+<h6>{{p.story.content.date}}</h6>
+<p>{{p.story.content.description }}</p>
+
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

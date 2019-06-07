@@ -1,0 +1,12 @@
+{% include header.html %}
+<!-- root -->
+{{ page.story.content._editable }}
+<div class="root">
+	<h4>Event Details</h4>
+	<pre>
+		{{ page.story.name }}
+		{{ page.story.content.date }}
+		{{ page.story.content.description }}
+	</pre>
+</div>
+{% include footer.html %}
