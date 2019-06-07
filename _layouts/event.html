@@ -6,7 +6,7 @@
 	<pre>
 		{{ page.story.name }}
 		{{ page.story.content.date }}
-		{{ page.story.content.description }}
+		{{ page.story.content.description | markdownify }}
 	</pre>
 </div>
 {% include footer.html %}

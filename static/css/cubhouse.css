@@ -9,7 +9,7 @@ h6{font-size:16px;font-weight:bold;}
 p{font-size:16px;}
 .para-xl{font-size:23px}
 .para-small{font-size:13px;}
-a{color:#294566;font-weight:500}
+a{color:#294566;}
 
 .img-margin{margin-bottom:2vh}
 .nobold{font-weight:normal}
@@ -24,10 +24,12 @@ input, select{display:block;margin-bottom:2vh}
 .navbar .nav-link.page a{color:#D4E283;}
 
 /* EVENTS */
-.events .event{margin-bottom:3vh;}
-.events .event .inner{padding:2vh;color:#333;}
-.bike_event .inner{background:#D4E283;}
-.plant_event .inner{background:#C790C5}
+.event{margin-bottom:4vh;}
+.events .event .inner{margin:4vh;color:#333;}
+.events .event .inner .date * *:last-child{margin-bottom:0;}
+.events .event .inner .description *:last-child{margin-bottom:0;}
+.bike_event{background:#D4E283;}
+.plant_event{background:#C790C5}
 
 /* INDEX */
 div.root section{padding:5rem 0;}
@@ -63,9 +65,19 @@ div.root #photo-overview{background:#FFF4D9;}
 
 #cubhouseteam{background:#D4E283}
 
-/* SHOP */
-.products .product{margin-bottom:8vh}
+/* PRODUCTS */
+#products #hero{padding:0;}
+#products .products{padding-top:2vh;}
+#products .products .product{margin-bottom:8vh}
+
+/* PRODUCT */
+#return-link{padding:0;}
+#product{padding-top:2vh;}
+#product .add-to-cart{margin:4vh 0;}
+#product .shopify-buy__btn{color:red;}
 .product_images img{margin-bottom:4vh}
+
+/* FOOTER */
 footer{background:#3CC2AB;margin-bottom:0;padding:2vh}
 footer p, footer a{margin-bottom:0; color:#FFF4D9}
 

@@ -1,22 +1,71 @@
+{{page.story.content._editable}}
+
+{% assign limit = blok.limit | plus:0 %}
+{% assign i = 0 %}
+
 <section class="eventgrid">
 	<div class="container">
 		<div class="row">
 			<div class="popup-details col-md-12">
-				{{page.story.content._editable}}
-				<h4>{{ blok.title }}</h4>
-				<pre>{{ blok.limit }}</pre>
-				{% assign i = 0 %}
-				{% for p in site.pages %}
-
-					{% if p.path contains "events" %}
-
-<a href="{{ p.story.full_slug }}"> <h4>{{p.story.name}}</h4></a>
-<h6>{{p.story.content.date}}</h6>
-<p>{{p.story.content.description }}</p>
-
-					{% endif %}
-				{% endfor %}
+				<h3>{{ blok.title }}</h3>
 			</div>
+		</div>
+		<div class="events row">
+		{% for p in site.pages %}
+			{% if i == limit %}
+				{% break %}
+			{% endif %}
+
+			{% if p.path contains "events/" %}
+			<div class="col-md-12 event {{p.story.content.eventtype}}_event">
+				<!-- <a href="{{ p.story.full_slug }}"> -->
+				<div class="row no-gutter inner media">
+					<div class="date col-md-1 text-center d-flex align-self-center">
+						<div>
+							<h6>{{p.story.content.date | date: "%B" }}</h6>
+							<h3>{{p.story.content.date | date: "%e" }}</h3>
+						</div>
+						<!-- SHOWING TIME ONLY IF IT ISNT AT MIDNIGHT  
+						{% assign date = p.story.content.date | date: "%T" %}
+						{% assign date = date | plus:0 %}
+
+						{% if date > 0 %}
+							<p class="para-small">{{p.story.content.date | date: "%l:%M %p" }}</p>
+						{% endif %}
+						-->
+
+					</div>
+					<div class="col-md-8 description">
+						<h5>{{p.story.name}}</h5>
+						{{p.story.content.description | markdownify }}
+					</div>
+				</div>
+				{% assign i = i | plus:1 %}
+			</div>		
+			{% endif %}
+		{% endfor %}
 		</div>
 	</div>
 </section>
+
+<!-- 
+	div class="container">
+		<div class="row">
+			<h3 class="col-md-12">Upcoming Events</h3>
+		</div>
+		<div</div> class="events row">
+		<div class="col-md-12 bike_event event">
+				<div class="inner row">
+					<div class="col-md-2 text-center align-middle">
+						<h5>May</h5>
+						<h3>19</h3>
+						<p class="para-small">10am</p>
+					</div>
+					<div class="col-md-10">
+						<h5>Lazy Sunday in Hell</h5>
+						<p class="para-small">A non-competitive, intermediate paced group ride starting from the Cub House to some of the radest road riding to be had.</p>
+	                    <p class="para-small">Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	                    <p class="para-small"><a href="#">buy ticket</a></p>
+	                </div>
+				</div>
+			</div>

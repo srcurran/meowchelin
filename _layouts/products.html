@@ -1,0 +1,34 @@
+{% include header.html %}
+<!-- root -->
+{{ page.story.content._editable }}
+
+<div class="root" id="products">
+	<section id="hero">
+		<div class="container">
+			<div class="row">
+				<h1 class="col">{{ page.story.name }}</h1>
+			</div>
+		</div>
+	</section>
+	<section class="products">
+		<div class="container">
+			<div class="row">
+			{% for p in site.pages %}
+				{% if p.path contains "product/" %}
+				<div class="product col-md-4">
+					<a href="/{{ p.story.full_slug }}">
+						{% for blok in p.story.content.images %}
+	                		<img src="{{ blok.filename }}" class="img-fluid" />
+	                		{% break %}
+	                	{% endfor %}
+						<h4><a href="/{{ p.story.full_slug }}">{{p.story.name}}</h4>
+						<h5>{{p.story.content.price }}</h5>
+					</a>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+</div>
+{% include footer.html %}

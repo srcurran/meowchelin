@@ -1,0 +1,50 @@
+{% include header.html %}
+<!-- root -->
+{{ page.story.content._editable }}
+<div class="root">
+	<section id="return-link">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p><a href="/products">&larr; BACK TO STORE</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="product">
+		<div class="container">
+			<div class="row">
+				<div class="product_images col-md-6">
+					{% for blok in page.story.content.images %}
+                		<img src="{{ blok.filename }}" class="img-fluid" />
+                	{% endfor %}
+                </div>
+                <div class="product_description col-md-6">
+					<h2>{{ page.story.name }}</h2>
+					<h5>{{ page.story.content.price }}</h5>
+				
+					<div class="add-to-cart">
+						{{ page.story.content.addtocart }}
+					</div>
+					<div class="description">
+						{{ page.story.content.description | markdownify }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+{% include footer.html %}
+<!-- 
+		<section id="product">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					{{ page.story.content.fulladdtocart | markdownify }}
+				</div>
+			</div>
+		</div>
+	</section>
+-->
